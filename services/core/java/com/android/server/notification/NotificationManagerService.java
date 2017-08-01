@@ -264,11 +264,10 @@ public class NotificationManagerService extends SystemService {
     private boolean mMultipleNotificationLeds;
     private boolean mMultipleLedsEnabledSetting = false;
 
-    private boolean mAutoGenerateNotificationColor = true;
+    private boolean mAutoGenerateNotificationColor = false; // zormax
 
     private boolean mScreenOnEnabled = false;
     private boolean mScreenOnDefault = false;
-
     private long[] mFallbackVibrationPattern;
     private boolean mUseAttentionLight;
     boolean mSystemReady;

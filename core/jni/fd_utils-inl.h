@@ -59,6 +59,7 @@ static const char* kPathWhitelist[] = {
   "/dev/ion",
   "/dev/dri/renderD129", // Fixes b/31172436
   "/system/framework/org.cyanogenmod.platform-res.apk",
+  "/proc/ged",
 #ifdef PATH_WHITELIST_EXTRA_H
 PATH_WHITELIST_EXTRA_H
 #endif
@@ -314,7 +315,7 @@ class FileDescriptorInfo {
       return true;
     }
 
-    return false;
+    return true;
   }
 
   // TODO: Call android::base::Readlink instead of copying the code here.
