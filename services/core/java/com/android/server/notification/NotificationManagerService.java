@@ -121,6 +121,7 @@ import android.text.TextUtils;
 import android.util.ArrayMap;
 import android.util.ArraySet;
 import android.util.AtomicFile;
+import java.util.HashMap;
 import android.util.Log;
 import android.util.Slog;
 import android.util.SparseArray;
@@ -265,11 +266,10 @@ public class NotificationManagerService extends SystemService {
     private boolean mMultipleNotificationLeds;
     private boolean mMultipleLedsEnabledSetting = false;
 
-    private boolean mAutoGenerateNotificationColor = true;
+    private boolean mAutoGenerateNotificationColor = false; // zormax
 
     private boolean mScreenOnEnabled = false;
     private boolean mScreenOnDefault = false;
-
     private long[] mFallbackVibrationPattern;
     private boolean mUseAttentionLight;
     boolean mSystemReady;
