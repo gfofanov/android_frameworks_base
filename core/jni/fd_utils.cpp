@@ -31,6 +31,8 @@
 #include <android-base/stringprintf.h>
 #include <android-base/strings.h>
 
+#include <fd_utils-inl-extra.h>
+
 // Static whitelist of open paths that the zygote is allowed to keep open.
 static const char* kPathWhitelist[] = {
   "/dev/null",
@@ -44,6 +46,9 @@ static const char* kPathWhitelist[] = {
   "/proc/ged",
   "/dev/dri/renderD129", // Fixes b/31172436
   "/system/framework/org.lineageos.platform-res.apk",
+#ifdef PATH_WHITELIST_EXTRA_H
+PATH_WHITELIST_EXTRA_H
+#endif
 };
 
 static const char kFdPath[] = "/proc/self/fd";
